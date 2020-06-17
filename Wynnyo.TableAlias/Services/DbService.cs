@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.IO;
-using System.Linq;
-using System.Text;
-using Wynnyo.TableAlias.Db;
+﻿using Wynnyo.TableAlias.Db;
 using Wynnyo.TableAlias.Entities;
 
 namespace Wynnyo.TableAlias.Services
@@ -35,6 +29,8 @@ namespace Wynnyo.TableAlias.Services
             _dbContext.Db.MappingTables.Add("LogEntity", "Sys_Log_2");
             _dbContext.Db.CodeFirst.InitTables<LogEntity>();
         }
+
+        #region 基本测试
 
         /// <summary>
         /// Mapping 方式测试
@@ -98,6 +94,8 @@ namespace Wynnyo.TableAlias.Services
             dbContext.Db.Queryable<LogEntity>().ToDataTable();
 
         }
+
+        #endregion
 
 
     }

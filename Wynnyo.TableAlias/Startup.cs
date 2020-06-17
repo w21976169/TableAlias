@@ -34,6 +34,7 @@ namespace Wynnyo.TableAlias
             });
 
             services.AddSingleton<DbService>();
+            services.AddSingleton<ExtService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
